@@ -1,5 +1,7 @@
 const forceDatabaseRefresh = false;
 
+import { seedUsers } from './seeds/user-seeds.js';
+
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -18,6 +20,8 @@ app.use(routes);
 
 sequelize.sync({force: forceDatabaseRefresh}).then(() => {
   app.listen(PORT, () => {
+    seedUsers();
+
     console.log(`Server is listening on port ${PORT}`);
   });
 });
