@@ -26,4 +26,4 @@ sequelize.sync({force: forceDatabaseRefresh}).then(() => {
   });
 });
 
-// Made by Zade
+// Made by Zade and Oran and Lila
