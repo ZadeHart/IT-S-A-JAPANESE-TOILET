@@ -20,7 +20,7 @@ app.use(routes);
 
 sequelize.sync({force: forceDatabaseRefresh}).then(() => {
   app.listen(PORT, () => {
-    seedUsers();
+    seedUsers(); //Trying to bypace nmp run seed.
 
     console.log(`Server is listening on port ${PORT}`);
   });
